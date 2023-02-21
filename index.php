@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>One Page Wonder - Start Bootstrap Template</title>
+        <title>Extranet GMAE</title>
         <!-- link -->
         <?php require('template/link.php'); ?>
     </head>
