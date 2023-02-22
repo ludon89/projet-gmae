@@ -15,6 +15,7 @@
         <div class="container">
         <div class="row">
             <div class="col-lg-6 mx-auto my-5">
+                <h2 class="display-4">Connexion</h2>
                     <!-- Formulaire -->
                 <form method="post" action="traitement/login.php">
                     <div class="mb-3">
@@ -26,12 +27,8 @@
                         <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Rester connecter</label>
-                    </div>
                     <button type="submit" class="btn btn-primary">Se connecter</button>
-                    <a href="inscription.php">ou S'inscrire</a>
+                    <a href="#!">Mot de passe oublié ?</a>
                 </form>
             </div>
         </div>

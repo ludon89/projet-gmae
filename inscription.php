@@ -17,6 +17,7 @@
             <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto my-5">
+                    <h2 class="display-4">Inscription</h2>
                     <!-- Formulaire -->
                     <form method="post" action="traitement/signup.php">
                         <div class="mb-3">
