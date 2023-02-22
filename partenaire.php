@@ -11,7 +11,7 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <?php require('template/menu.php'); ?>
+        <?php require('template/header.php'); ?>
         <!-- Content section 1-->
         <section id="scroll">
             <div class="container px-5">
@@ -60,7 +60,6 @@
                 </div>
             </div>
         </section>
-        <?php require('template/header.php'); ?>
         <!-- Footer-->
         <?php require('template/footer.php'); ?>
         <!-- script -->

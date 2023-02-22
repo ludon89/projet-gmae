@@ -1,14 +1,12 @@
-<header class="masthead text-center text-white">
-    <div class="masthead-content">
-        <div class="container px-5">
-            <h1 class="masthead-heading mb-0">Bienvenue au GMAE</h1>
-            <h2 class="masthead-subheading mb-0">Trouver votre meilleur préstation</h2>
-            <a class="btn btn-primary btn-xl rounded-pill mt-5" href="connexion.php">Connexion</a>
-            <a class="btn btn-primary btn-xl rounded-pill mt-5" href="inscription.php">S'inscrire</a>
+<nav class="navbar navbar-expand-lg  navbar-custom">
+    <div class="container px-5">
+        <img src="assets/img/logo_GMAE-1.png" width=100px alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.php">Qui somme-nous?</a></li>
+            </ul>
         </div>
     </div>
-    <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div>
-</header>
+</nav>

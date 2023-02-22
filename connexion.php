@@ -10,7 +10,7 @@
 </head>
 <body id="page-top">
     <!-- Navigation-->
-    <?php require('template/menu.php'); ?>
+    <?php require('template/header.php'); ?>
         <!-- Page content-->
         <div class="container">
         <div class="row">
