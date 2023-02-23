@@ -1,3 +1,14 @@
+<?php
+    // Config PHP
+    session_start();
+
+    // Check user IS connected
+    if (isset($_SESSION['user'])) {
+        // Redirection
+        header('Location: index.php');
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,7 +28,7 @@
             <div class="col-lg-6 mx-auto my-5">
                 <h2 class="display-4">Connexion</h2>
                     <!-- Formulaire -->
-                <form method="post" action="traitement/login.php">
+                <form method="post" action="controllers/login.php">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

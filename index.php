@@ -1,3 +1,10 @@
+<?php 
+
+session_start();
+
+// Connection à la BDD
+require('model/connect-bdd.php');
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
