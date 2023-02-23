@@ -10,12 +10,11 @@ $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_ADD_SLASHES);
 require('../model/connect-bdd.php');
 
 // Requête pour vérifier l'existance de l'email
-$sql = "SELECT * FROM users WHERE email='$email'";
-$req = $bdd->query($sql); // Execution de la requête
+$req = $bdd->prepare("SELECT * FROM users WHERE email='$email'"); // Execution de la requête
 $res = $req->fetch(PDO::FETCH_ASSOC); // Lecture du résultat de la requête
 
 // Si la requête renvoi un résultat
-if ($res) {
+if (isset($_SESSION['users']) && $_SESSION['users'] == true) {
     // Vérification du password avec le hash stocké en BDD
     $passwordCheck = password_verify($password, $res['pass']);
 
@@ -24,13 +23,15 @@ if ($res) {
         // Enregistrement des infos du user connecté
         $_SESSION['user'] = array(
             'id' => $res['id_user'],
-            'name' => $res['name'],
+            'nom' => $res['nom'],
             'email' => $res['email'],
-            'phone' => $res['phone']
+            'prenom' => $res['prenom']
         );
         // Rediriger vers le dashbord du user
-        header('Location: dashboard.php');
+        header('Location: ../dashboard.php');
         exit();
+    }else {
+        header('Location: erreur.php');
     }
 }
 

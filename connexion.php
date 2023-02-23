@@ -36,7 +36,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                        <input type="password" name="pass" class="form-control" id="exampleInputPassword1">
                     </div>
                     <button type="submit" class="btn btn-primary">Se connecter</button>
                     <a href="#!">Mot de passe oublié ?</a>
