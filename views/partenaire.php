@@ -13,13 +13,46 @@ $req = $bdd->query($sql);
 $acteur = $req->fetch(PDO::FETCH_ASSOC);
 
 // Requête & exécution commentaire
-$sql = "SELECT * FROM posts
-INNER JOIN acteurs
-ON posts.id_acteur = acteurs.id_acteur";
+$sql = "
+SELECT
+    *
+FROM
+    posts
+    INNER JOIN acteurs ON posts.id_acteur = acteurs.id_acteur
+    INNER JOIN users ON posts.id_user = users.id_user
+    AND acteurs.id_acteur = '$idActeur'
+";
 $req = $bdd->query($sql);
-$comment = $req->fetch(PDO::FETCH_ASSOC);
+$comments = $req->fetch(PDO::FETCH_ASSOC);
 
-// var_dump($comment);
+var_dump($comments);
+var_dump($req->rowCount());
+
+// Requête & exécution likes
+$sql = "
+SELECT
+    *
+FROM
+    votes
+    INNER JOIN acteurs ON votes.id_acteur = acteurs.id_acteur
+    AND acteurs.id_acteur = '$idActeur'
+    AND votes.vote = 1
+";
+$req = $bdd->query($sql);
+$likes = $req->rowCount();
+
+// Requête & exécution dislikes
+$sql = "
+SELECT
+    *
+FROM
+    votes
+    INNER JOIN acteurs ON votes.id_acteur = acteurs.id_acteur
+    AND acteurs.id_acteur = '$idActeur'
+    AND votes.vote = 0
+";
+$req = $bdd->query($sql);
+$dislikes = $req->rowCount();
 
 ?>
 
@@ -63,37 +96,16 @@ $comment = $req->fetch(PDO::FETCH_ASSOC);
                     <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
                     <button type="submit" class="btn btn-success">Publier</button>
                 </form>
-                <!-- Comment with nested comments-->
-                <div class="d-flex mb-4">
-                    <!-- Parent comment-->
-                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                    <div class="ms-3">
-                        <div class="fw-bold">Commenter Name</div>
-                        If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks.
-                        <!-- Child comment 1-->
-                        <div class="d-flex mt-4">
-                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                            <div class="ms-3">
-                                <div class="fw-bold">Commenter Name</div>
-                                And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
-                            </div>
-                        </div>
-                        <!-- Child comment 2-->
-                        <div class="d-flex mt-4">
-                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
-                            <div class="ms-3">
-                                <div class="fw-bold">Commenter Name</div>
-                                When you put money directly to a problem, it makes a good headline.
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!-- Single comment-->
                 <div class="d-flex">
                     <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
                     <div class="ms-3">
-                        <div class="fw-bold">Commenter Name</div>
-                        When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
+                        Compteur de likes : <?= $likes ?>
+                        Compteur de dislikes : <?= $dislikes ?>
+                        <?php foreach ($comments as $comment) : ?>
+                            <div class="fw-bold"><?= $comment["username"] ?></div>
+                            <?= $comment["content"] ?>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
