@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extranet GMAE</title>
     <!-- link -->
-    <?php require('template/link.php'); ?>
+    <?php require('../template/link.php'); ?>
 </head>
 <body id="page-top">
     <!-- Navigation-->
-    <?php require('template/header.php'); ?>
+    <?php require('../template/header.php'); ?>
         <!-- Page content-->
         <div class="container">
         <div class="row">
@@ -34,8 +34,8 @@
         </div>
     </div>
     <!-- Footer-->
-    <?php require('template/footer.php'); ?>
+    <?php require('../template/footer.php'); ?>
     <!-- script -->
-    <?php require('template/script.php'); ?>
+    <?php require('../template/script.php'); ?>
 </body>
 </html>
