@@ -19,6 +19,11 @@
 .foot{
   background: linear-gradient(180deg, #3F383C 0%, rgba(75, 47, 47, 0.5) 100%);
 }
+.popo
+  {
+    display: flex;
+    margin-right: 20px;
+  }
 
 :root {
   --bs-blue: #0d6efd;
@@ -4051,6 +4056,7 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  color: #fff;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -4082,6 +4088,7 @@ textarea.form-control-lg {
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
+  color: #fff;
 }
 .navbar-nav .dropdown-menu {
   position: static;

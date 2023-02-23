@@ -7,11 +7,29 @@
         <meta name="author" content="" />
         <title>Extranet GMAE</title>
         <!-- link -->
-        <?php require('template/link.php'); ?>
+        <link rel="icon" type="image/png" href="assets/logo_GMAE.png"/>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="assets/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- header-->
-        <?php require('template/header.php'); ?>
+        <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container px-5">
+        <img src="assets/img/logo_GMAE-1.png" width=100px alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.php">Qui somme-nous?</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
         <!-- containt-->
         <header class="masthead text-center text-white">
             <div class="masthead-content">

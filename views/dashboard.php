@@ -7,11 +7,11 @@
         <meta name="author" content="" />
         <title>Extranet GMAE</title>
         <!-- link -->
-        <?php require('template/link.php'); ?>
+        <?php require('../template/link.php'); ?>
     </head>
     <body id="page-top">
         <!-- header-->
-        <?php require('template/header.php'); ?>
+        <?php require('../template/header.php'); ?>
         <div class="">
             <h1>Hello Id_user</h1>
         </div>
@@ -26,8 +26,8 @@
         <button type="submit" class="btn btn-success">Deconnexion</button>
         </div>
         <!-- Footer-->
-        <?php require('template/footer.php'); ?>
+        <?php require('../template/footer.php'); ?>
         <!-- script -->
-        <?php require('template/script.php'); ?>
+        <?php require('../template/script.php'); ?>
     </body>
 </html>

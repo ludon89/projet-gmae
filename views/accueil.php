@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -7,11 +7,11 @@
         <meta name="author" content="" />
         <title>Extranet GMAE</title>
         <!-- link -->
-        <?php require('template/link.php'); ?>
+        <?php require('../template/link.php'); ?>
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <?php require('template/header.php'); ?>
+        <?php require('../template/header.php'); ?>
         <!-- Content section 1-->
         <section id="scroll">
             <div class="container px-5">
@@ -64,8 +64,8 @@
             </div>
         </section>
         <!-- Footer-->
-        <?php require('template/footer.php'); ?>
+        <?php require('../template/footer.php'); ?>
         <!-- script -->
-        <?php require('template/script.php'); ?>
+        <?php require('../template/script.php'); ?>
     </body>
 </html>
