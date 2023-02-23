@@ -2,12 +2,12 @@
     // Config PHP
     session_start();
 
-    Check user IS NOT connected
-    if (!isset($_SESSION['user'])) {
-        // Redirection
-        header('Location: connexion.php');
-        exit();
-    }
+    // Check user IS NOT connected
+    // if (!isset($_SESSION['user'])) {
+    //     // Redirection
+    //     header('Location: connexion.php');
+    //     exit();
+    // }
 ?>
 
 <!DOCTYPE html>
