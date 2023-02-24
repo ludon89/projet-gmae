@@ -45,7 +45,9 @@
                         <div class="mb-3">
                             <label for="rep">Réponse secrète</label>
                             <input type="text" id="rep" class="form-control" required>
+
                         </div>    
+
                         <button type="submit" class="btn btn-success">Valider</button>
                         <!-- <a href="connexion.php">ou Se connecter</a> -->
                     </form>
