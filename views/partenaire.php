@@ -23,7 +23,7 @@ FROM
     AND acteurs.id_acteur = '$idActeur'
 ";
 $req = $bdd->query($sql);
-$comments = $req->fetch(PDO::FETCH_ASSOC);
+$comments = $req->fetchAll(PDO::FETCH_ASSOC);
 
 var_dump($comments);
 var_dump($req->rowCount());
