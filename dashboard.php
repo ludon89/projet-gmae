@@ -1,6 +1,8 @@
 <?php
     // Config PHP
     session_start();
+    var_dump($_SESSION);
+    require('model/connect-bdd.php');
 
     // Check user IS NOT connected
     // if (!isset($_SESSION['user'])) {
@@ -24,19 +26,29 @@
     <body id="page-top">
         <!-- header-->
         <?php require('template/header.php'); ?>
-        <div class="">
-            <h1>Hello Id_user</h1>
+        <div class="container">
+            <div class="raw">
+                <div class="col-lg-6 mx-auto my-5">
+                    <div class="">
+                        <h1>Hello <?= $_SESSION['user']['username'] ?>  </h1>
+                    </div>
+                    <div class="">
+                        <p>Identifiant : <?= $_SESSION['user']['username'] ?>  </p>
+                        <p>Nom : <?= $_SESSION['user']['nom'] ?></p>
+                        <p>Prenom : <?= $_SESSION['user']['prenom'] ?></p>
+                        <p>Adresse mail : <?= $_SESSION['user']['email'] ?></p>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-success"> 
+                            <a class="lien" href="modified.php">Modifier</a> 
+                        </button>
+                        <button type="submit" class="btn btn-success">Deconnexion</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="">
-            <p>Identifiant : <?= $_SESSION['user']['id'] ?>  </p>
-            <p>Nom : <?= $_SESSION['user']['name'] ?></p>
-            <p>Prenom : <?= $_SESSION['user']['prenom'] ?></p>
-            <p>Adresse mail : <?= $_SESSION['user']['email'] ?></p>
-        </div>
-        <div>
-        <button type="submit" class="btn btn-success">Modifier</button>
-        <button type="submit" class="btn btn-success">Deconnexion</button>
-        </div>
+        
         <!-- Footer-->
         <?php require('template/footer.php'); ?>
         <!-- script -->
