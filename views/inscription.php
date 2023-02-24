@@ -6,36 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extranet GMAE</title>
     <!-- link -->
-    <?php require('template/link.php'); ?>
+    <?php require('../template/link.php'); ?>
 </head>
 <body id="page-top">
     <!-- Navigation-->
-    <?php require('template/header.php'); ?>
+    <?php require('../template/header.php'); ?>
     <!-- Header-->
-    <!-- <?php require('template/header.php'); ?> -->
+    <!-- <?php require('../template/header.php'); ?> -->
             <!-- Page content-->
             <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto my-5">
-                    <h2 class="display-4">Inscription</h2>
+                    <h2 class="display-4">Veuillez renseigner ces champs</h2>
                     <!-- Formulaire -->
                     <form method="post" action="traitement/signup.php">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nom</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                            <input type="text" id="nom" name="nom" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Téléphone</label>
-                            <input type="tel" id="phone" name="phone" class="form-control">
+                            <label for="name" class="form-label">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email</label>
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                             <div id="emailHelp" class="form-text">Ne partagez jamais votre email.</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3">
                             <label for="quest" class="form-label">Question secrète</label><br>
@@ -49,16 +45,16 @@
                         <div class="mb-3">
                             <label for="rep">Réponse secrète</label>
                             <input type="text" id="rep" class="form-control" required>
-                        </div>    
-                        <button type="submit" class="btn btn-success">S'inscrire</button>
+                        </div>
+                        <button type="submit" class="btn btn-success">Valider</button>
                         <!-- <a href="connexion.php">ou Se connecter</a> -->
                     </form>
                 </div>
             </div>
         </div>
     <!-- Footer-->
-    <?php require('template/footer.php'); ?>
+    <?php require('../template/footer.php'); ?>
     <!-- script -->
-    <?php require('template/script.php'); ?>
+    <?php require('../template/script.php'); ?>
 </body>
 </html>

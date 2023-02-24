@@ -7,11 +7,11 @@
         <meta name="author" content="" />
         <title>Extranet GMAE</title>
         <!-- link -->
-        <?php require('template/link.php'); ?>
+        <?php require('../template/link.php'); ?>
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <?php require('template/header.php'); ?>
+        <?php require('../template/header.php'); ?>
         <!-- page-content -->
         <section class="bad" id="scroll">
             <div class="container px-5">
@@ -29,8 +29,8 @@
             </div>
         </section>
         <!-- Footer-->
-        <?php require('template/footer.php'); ?>
+        <?php require('../template/footer.php'); ?>
         <!-- script -->
-        <?php require('template/script.php'); ?>
+        <?php require('../template/script.php'); ?>
     </body>
 </html>

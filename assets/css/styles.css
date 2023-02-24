@@ -10,10 +10,16 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-.bad{
-  background: linear-gradient(blue,red);
+.bad
+{
+  background: url(../img/background_red_blue.jpg);
+  background-size: cover;
   color: white;
 }
+.foot{
+  background: linear-gradient(180deg, #3F383C 0%, rgba(75, 47, 47, 0.5) 100%);
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
