@@ -15,17 +15,19 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="assets/css/styles.css" rel="stylesheet" />
-
 </head>
 <!-- test -->
 
 <body id="page-top">
     <!-- header-->
-    <nav class="navbar navbar-expand-lg navbar-custom ">
+    <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container px-5">
-            <img src="../assets/img/logo_GMAE-1.png" width=100px alt="">
+            <div class="logo">
+                <img src="assets/img/logo_GMAE.png" width=100px alt="">
+                <p>GMAE</p>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="collapse navbar-collapse" id="navbarResponsive px-5">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="views/about.php">Qui sommes-nous?</a></li>
@@ -38,14 +40,10 @@
         <div class="masthead-content">
             <div class="container px-5">
                 <h1 class="masthead-heading mb-0">Bienvenue au GMAE</h1>
-                <h2 class="masthead-subheading mb-0">Trouver votre meilleur préstation</h2>
+                <h2 class="masthead-subheading mb-0">Trouvez la meilleure prestation !</h2>
                 <a class="btn btn-primary btn-xl rounded-pill mt-5" href="views/connexion.php">Connexion</a>
             </div>
         </div>
-        <div class="bg-circle-1 bg-circle"></div>
-        <div class="bg-circle-2 bg-circle"></div>
-        <div class="bg-circle-3 bg-circle"></div>
-        <div class="bg-circle-4 bg-circle"></div>
     </header>
     <!-- Footer-->
     <?php require('template/footer.php'); ?>
