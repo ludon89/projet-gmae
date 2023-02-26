@@ -17,8 +17,6 @@
     <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
 
-<!-- test conflit merge -->
-
 <body id="page-top">
     <!-- header-->
     <nav class="navbar navbar-expand-lg bg-dark">
