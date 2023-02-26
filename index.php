@@ -17,7 +17,7 @@
     <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
 
-<!-- Test merge -->
+<!-- test conflit merge -->
 
 <body id="page-top">
     <!-- header-->
