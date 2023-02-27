@@ -52,6 +52,7 @@ var_dump($_SESSION);
         <div class="masthead-content">
             <div class="container px-5">
                 <h1 class="masthead-heading mb-0">Bienvenue au GMAE</h1>
+
                 <h2 class="masthead-subheading mb-0">Trouvez la meilleure prestation !</h2>
                 <a class="btn btn-primary btn-xl rounded-pill mt-5" href="views/connexion.php">Connexion</a>
             </div>
