@@ -32,8 +32,8 @@
                         <h6 class="text-uppercase mb-4 font-weight-bold" style=" font-size : 1.3rem;">Contact</h6>
                         <p><i class="fas fa-phone mr-3" style=" margin-right : 0.5rem;"></i> 04.73.90.90.09</p>
                         <p><i class="fas fa-phone mr-3" style=" margin-right : 0.5rem;"></i>06.09.08.67.54</p>
-                        <p><i class="fas fa-envelope mr-3" style=" margin-right : 0.5rem;"> </i>Gmae@gmail.com</p>
-                        <p><i class="fas fa-home mr-3" style=" margin-right : 0.5rem;"></i> 10 Allée Evarsite Galois, 63000</p>
+                        <p><i class="fas fa-envelope mr-3" style=" margin-right : 0.5rem;"> </i>gmae@gmail.com</p>
+                        <p><i class="fas fa-home mr-3" style=" margin-right : 0.5rem;"></i> 10 Allée Evariste Galois, 63000</p>
                     </div>
                     <!-- Grid column -->
 
