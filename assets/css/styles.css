@@ -13,6 +13,13 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+.logo{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 0.5vh;
+}
 .bad
 {
   background: url(../img/background_red_blue.jpg);

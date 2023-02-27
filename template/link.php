@@ -1,4 +1,4 @@
-<link rel="icon" type="image/png" href="../assets/logo_GMAE.png"/>
+<link rel="icon" type="image/png" href="../assets/img/logo_GMAE.png"/>
 <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 <!-- Google fonts-->
