@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,14 +25,14 @@
             <div class="col-lg-6 mx-auto my-5">
                 <h2 class="display-4">Ajout d'un utilisateur</h2>
                 <!-- Formulaire -->
-                <form method="post" action="traitement/login.php">
+                <form method="post" action="../traitement/src_adduser.php">
                     <div class="mb-3">
                         <label for="username" class="form-label">Identifiant</label>
-                        <input type="text" name="username" class="form-control" id="username" aria-describedby="emailHelp">
+                        <input type="text" name="username" class="form-control" id="username" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Mot de passe</label>
-                        <input type="password" name="password" class="form-control" id="password">
+                        <input type="password" name="password" class="form-control" id="password" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Ajouter</button>
                 </form>
