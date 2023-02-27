@@ -1,7 +1,7 @@
 <?php
 // Infos de connexion
 $host = "localhost"; // Adresse du serveur
-$dbname = "tp-projet";
+$dbname = "gmae";
 $user = "root"; // Par défaut avec XAMPP c'est "root"
 $pass = ""; // Par défaut sous XAMMP, il n'y a pas de password -> ""
 
