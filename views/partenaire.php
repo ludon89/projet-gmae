@@ -12,7 +12,7 @@ $sql = "SELECT * FROM acteurs WHERE id_acteur = '$idActeur'";
 $req = $bdd->query($sql);
 $acteur = $req->fetch(PDO::FETCH_ASSOC);
 
-// Requête & exécution commentaire
+// Requête & exécution affichage commentaire
 $sql = "
 SELECT
     *
@@ -25,10 +25,7 @@ FROM
 $req = $bdd->query($sql);
 $comments = $req->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($comments);
-var_dump($req->rowCount());
-
-// Requête & exécution likes
+// Requête & exécution affichage likes
 $sql = "
 SELECT
     *
@@ -41,7 +38,7 @@ FROM
 $req = $bdd->query($sql);
 $likes = $req->rowCount();
 
-// Requête & exécution dislikes
+// Requête & exécution affichage dislikes
 $sql = "
 SELECT
     *

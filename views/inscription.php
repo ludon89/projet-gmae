@@ -1,3 +1,9 @@
+<?php
+
+var_dump($_SESSION['user']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -46,7 +52,7 @@
                             <label for="rep">Réponse secrète</label>
                             <input type="text" id="rep" class="form-control" required>
 
-                        </div>    
+                        </div>
 
                         <button type="submit" class="btn btn-success">Valider</button>
                         <!-- <a href="connexion.php">ou Se connecter</a> -->

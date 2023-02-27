@@ -37,10 +37,6 @@ $res = $req->fetch(PDO::FETCH_ASSOC); // Lecture du résultat de la requête
 
     $_SESSION['user'] = array(
         'username' => $res['username'],
-        "nom" => $res["nom"],
-        'email' => $res['email'],
-        'prenom' => $res['prenom']
-        // 'pass' => $res['pass']
     );
     header('Location: ../views/dashboard.php');
     exit();
