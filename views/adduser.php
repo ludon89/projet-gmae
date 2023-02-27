@@ -23,6 +23,13 @@ session_start();
     <div class="container">
         <div class="row">
             <div class="col-lg-6 mx-auto my-5">
+                <?php if (isset($_SESSION['error'])) : ?>
+                    <p class="text-success text-center fw-bold">
+                        <?= $_SESSION['error'] ?>
+                    </p>
+                    <?php $_SESSION['error'] = null; // On vide le message d'erreur
+                    ?>
+                <?php endif ?>
                 <h2 class="display-4">Ajout d'un utilisateur</h2>
                 <!-- Formulaire -->
                 <form method="post" action="../traitement/src_adduser.php">

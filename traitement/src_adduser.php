@@ -18,14 +18,13 @@ $err = null;
 try {
     $req = $bdd->query($sql); // Execution de la requête
     $res = $req->rowCount(); // Comptage des lignes insérées
-    $err = "L'utilisateur a bien été ajouté";
+    $err = "L'utilisateur a bien été ajouté !";
 } catch(PDOException $error) {
     // Lorsqu'un email existe déja (DUPLICATE ENTRY)
     if ($error->errorInfo[1] === 1062) {
         $err = "Identifiant déja existant !";
     }
 }
-var_dump($err);
 
 // Enregitrer le message d'erreur en SESSION
 session_start();
@@ -34,11 +33,11 @@ $_SESSION['error'] = $err;
 // Redirection suivant le résultat (Si au moins une ligne est insérée)
 if ($res) {
     // Rediriger vers l'accueil
-    header('Location: adduser.php');
+    header('Location: ../views/adduser.php');
     exit();
 } else {
     // Sinon : on redirige vers une page d'erreur.
-    header('Location: erreur.php');
+    header('Location: ../views/erreur.php');
     exit;
 }
 
