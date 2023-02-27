@@ -32,7 +32,7 @@ session_start();
                 <?php endif ?>
                 <h2 class="display-4">Ajout d'un utilisateur</h2>
                 <!-- Formulaire -->
-                <form method="post" action="../traitement/src_adduser.php">
+                <form method="post" action="../controllers/src_adduser.php">
                     <div class="mb-3">
                         <label for="username" class="form-label">Identifiant</label>
                         <input type="text" name="username" class="form-control" id="username" required>

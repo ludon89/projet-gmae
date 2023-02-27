@@ -25,9 +25,6 @@ FROM
 $req = $bdd->query($sql);
 $comments = $req->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($comments);
-var_dump($req->rowCount());
-
 // Requête & exécution likes
 $sql = "
 SELECT

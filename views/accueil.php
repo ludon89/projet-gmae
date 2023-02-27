@@ -1,9 +1,9 @@
 <?php
 
+session_start();
+
 // Connexion à la BDD
 require('../models/connect-bdd.php');
-
-var_dump($bdd);
 
 // Requête & execution
 $sql = "SELECT * FROM acteurs";
