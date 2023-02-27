@@ -21,7 +21,7 @@ $req = $bdd->query("SELECT * FROM users WHERE username='$username'  "); // Execu
 // var_dump($req);
 $res = $req->fetch(PDO::FETCH_ASSOC); // Lecture du résultat de la requête
 // Si la requête renvoi un résultat
-if (isset($email)) {
+if ($res) {
     // Vérification du password avec le hash stocké en BDD
     // $passwordCheck = password_verify($password, $res['pass']);
     // var_dump('ok2');
@@ -43,6 +43,7 @@ if (isset($email)) {
         // 'pass' => $res['pass']
     );
     header('Location: ../dashboard.php');
+    exit();
 }
 
 // // Redirection par défaut

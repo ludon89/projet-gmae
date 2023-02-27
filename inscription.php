@@ -25,8 +25,8 @@
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Téléphone</label>
-                            <input type="tel" id="phone" name="phone" class="form-control">
+                            <label for="lastname" class="form-label">Prénom</label>
+                            <input type="text" id="lastname" name="prenom" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email</label>

@@ -25,18 +25,18 @@
     </head>
     <body id="page-top">
         <!-- header-->
-        <?php require('template/header.php'); ?>
+        <?php require('template/header2.php'); ?>
         <div class="container">
             <div class="raw">
                 <div class="col-lg-6 mx-auto my-5">
                     <div class="">
-                        <h1>Hello <?= $_SESSION['user']['username'] ?>  </h1>
+                        <h1>Hello <?= $_SESSION['users']['username'] ?>  </h1>
                     </div>
                     <div class="">
-                        <p>Identifiant : <?= $_SESSION['user']['username'] ?>  </p>
-                        <p>Nom : <?= $_SESSION['user']['nom'] ?></p>
-                        <p>Prenom : <?= $_SESSION['user']['prenom'] ?></p>
-                        <p>Adresse mail : <?= $_SESSION['user']['email'] ?></p>
+                        <p>Identifiant : <?= $_SESSION['users']['username'] ?>  </p>
+                        <p>Nom : <?= $_SESSION['users']['nom'] ?></p>
+                        <p>Prenom : <?= $_SESSION['users']['prenom'] ?></p>
+                        <p>Adresse mail : <?= $_SESSION['users']['email'] ?></p>
                     </div>
                     <div>
                         <button type="submit" class="btn btn-success"> 

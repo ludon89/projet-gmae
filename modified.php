@@ -25,7 +25,7 @@
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Téléphone</label>
+                            <label for="phone" class="form-label">Prénom</label>
                             <input type="tel" id="phone" name="phone" class="form-control">
                         </div>
                         <div class="mb-3">

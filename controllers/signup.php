@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Data (données qui transitent dans la requête HTTP)
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_ADD_SLASHES);
@@ -6,6 +7,7 @@ $prenom = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_ADD_SLASHES);
 // $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_NUMBER_INT);
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_ADD_SLASHES);
+$username = $_SESSION['users']['username'];
 
 // Debug
 //var_dump($name, $phone, $email, $password);
@@ -17,24 +19,25 @@ $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_ADD_SLASHES);
 // Connexion à la BDD
 require('../model/connect-bdd.php');
 
-// Requête pour enregistrer les informations de l'utilisateur
-$sql = "INSERT INTO users VALUES('', '$email', '$name', '$pass')";
-
-// Gestion des erreurs : On essaie d'executer la requête
 $err = null;
-try {
-    $req = $bdd->query($sql); // Execution de la requête
-    $res = $req->rowCount(); // Comptage des lignes insérées
-    $err = "Votre compte est bien créé.";
-} catch(PDOException $error) {
-    // Lorsqu'un email existe déja (DUPLICATE ENTRY)
-    if ($error->errorInfo[1] === 1062) {
-        $err = "adresse email déja existante !";
-    }
+
+$sql = "UPDATE `users` SET
+ `email`= '$email'
+  WHERE `username`='$username'";
+
+// Requête pour enregistrer les informations de l'utilisateur
+$req = $bdd->query($sql); // Execution de la requête
+$res = $req->rowCount(); // Comptage des lignes insérées
+
+if ($res) {
+    // Mise à jour du message d'erreur
+    $err = "Votre compte est bien à jour.";
+    // Mise à jour de la session (seulement les infos concernées)
+    $_SESSION['users']['name'] = $name;
+    $_SESSION['users']['email'] = $email;
 }
 
 // Enregitrer le message d'erreur en SESSION
-session_start();
 $_SESSION['error'] = $err;
 
 // Redirection suivant le résultat (Si au moins une ligne est insérée)
