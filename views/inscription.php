@@ -19,14 +19,14 @@
                 <div class="col-lg-6 mx-auto my-5">
                     <h2 class="display-4">Inscription</h2>
                     <!-- Formulaire -->
-                    <form method="post" action="controllers/signup.php">
+                    <form method="post" action="traitement/signup.php">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nom</label>
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="lastname" class="form-label">Prénom</label>
-                            <input type="text" id="lastname" name="prenom" class="form-control">
+                            <label for="phone" class="form-label">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -50,9 +50,7 @@
                             <label for="rep">Réponse secrète</label>
                             <input type="text" id="rep" class="form-control" required>
                         </div>    
-                        <button type="submit" class="btn btn-success">
-                            <a href="dashboard.php">S'inscrire</a> 
-                        </button>
+                        <button type="submit" class="btn btn-success">S'inscrire</button>
                         <!-- <a href="connexion.php">ou Se connecter</a> -->
                     </form>
                 </div>

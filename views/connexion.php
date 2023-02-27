@@ -17,26 +17,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extranet GMAE</title>
     <!-- link -->
-    <?php require('template/link.php'); ?>
+    <?php require('../template/link.php'); ?>
 </head>
 <body id="page-top">
     <!-- Navigation-->
-    <?php require('template/header.php'); ?>
+    <?php require('../template/header.php'); ?>
         <!-- Page content-->
         <div class="container">
         <div class="row">
             <div class="col-lg-6 mx-auto my-5">
                 <h2 class="display-4">Connexion</h2>
                     <!-- Formulaire -->
-                <form method="post" action="controllers/login.php">
+                <form method="post" action="../controllers/login.php">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">ID </label>
-                        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">Ne partagez jamais votre email.</div>
+                        <label for="username" class="form-label">Identifiant</label>
+                        <input type="username" name="username" class="form-control" id="exampleInputusername1" aria-describedby="usernameHelp" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-                        <input type="password" name="pass" class="form-control" id="exampleInputPassword1">
+                        <label for="password" class="form-label">Mot de passe</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Se connecter</button>
                     <a href="#!">Mot de passe oublié ?</a>
@@ -45,8 +44,9 @@
         </div>
     </div>
     <!-- Footer-->
-    <?php require('template/footer.php'); ?>
+    <?php require('../template/footer.php'); ?>
     <!-- script -->
-    <?php require('template/script.php'); ?>
+    <?php require('../template/script.php'); ?>
 </body>
 </html>
+
