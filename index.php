@@ -21,6 +21,8 @@
 <body id="page-top">
     <!-- header-->
     <?php require('template/header.php'); ?>
+    
+    
     <!-- containt-->
     <header class="masthead text-center text-white">
         <div class="masthead-content">

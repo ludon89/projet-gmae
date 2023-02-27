@@ -20,12 +20,18 @@
   color: white;
 }
 .foot{
-  background: linear-gradient(180deg, #3F383C 0%, rgba(75, 47, 47, 0.5) 100%);
+  background-color: linear-gradient(180deg, #3F383C 0%, rgba(75, 47, 47, 0.5) 100%);
+  
+}
+
+.coloration 
+{
+  color: white;
 }
 .popo
   {
     display: flex;
-    flex-direction: column;
+    
     align-items: flex-start;
     margin-right: 20px;
   }
@@ -131,8 +137,8 @@
 }
 
 .display{
-  display: flex;
-  justify-content: flex-end;
+  
+  text-align: left;
   color: #fff;
 }
 
@@ -167,6 +173,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-family: "Catamaran", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 800;
   line-height: 1.2;
+  
 }
 
 h1, .h1 {
@@ -212,7 +219,6 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1rem;
 }
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -729,8 +735,8 @@ progress {
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
@@ -4160,6 +4166,7 @@ textarea.form-control-lg {
 }
 .navbar-toggler:hover {
   text-decoration: none;
+  color: red;
 }
 .navbar-toggler:focus {
   text-decoration: none;
@@ -4175,6 +4182,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  color: red;
 }
 
 .navbar-nav-scroll {
@@ -4500,7 +4508,7 @@ textarea.form-control-lg {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(173, 22, 22, 0.9);
 }
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
   color: rgba(0, 0, 0, 0.9);
@@ -11385,8 +11393,8 @@ header.masthead {
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
   background: #fffbd5; 
-background: -webkit-linear-gradient(to bottom, #b20a2c, #fffbd5);  
-background: linear-gradient(to bottom, #b20a2c, #fffbd5); 
+  background: -webkit-linear-gradient(to bottom, #b20a2c, #fffbd5);  
+  background: linear-gradient(to bottom, #b20a2c, #fffbd5); 
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;

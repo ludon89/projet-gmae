@@ -6,5 +6,5 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
-// let text = document.querySelector('page-top');
-// text= prompt('veillez-vous connecter ');
+let text = document.querySelector('page-top');
+text= prompt('veillez-vous connecter ');
