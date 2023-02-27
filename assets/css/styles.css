@@ -13,7 +13,10 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+.foot{
+  background-color: linear-gradient(180deg, #3F383C 0%, rgba(75, 47, 47, 0.5) 100%);
 
+}
 .logo{
   display: flex;
   align-items: center;
@@ -28,17 +31,17 @@
 }
 .foot{
   background-color: linear-gradient(180deg, #3F383C 0%, rgba(75, 47, 47, 0.5) 100%);
-  
+
 }
 
-.coloration 
+.coloration
 {
   color: white;
 }
 .popo
   {
     display: flex;
-    
+
     align-items: flex-start;
     margin-right: 20px;
   }
@@ -144,7 +147,7 @@
 }
 
 .display{
-  
+
   text-align: left;
   color: #fff;
 }
@@ -180,7 +183,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-family: "Catamaran", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 800;
   line-height: 1.2;
-  
+
 }
 
 h1, .h1 {
@@ -2271,7 +2274,7 @@ progress {
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-appearance: none;
-     -moz-appearance: none;
+    -moz-appearance: none;
           appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2559,7 +2562,7 @@ textarea.form-control-lg {
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
   -webkit-appearance: none;
-     -moz-appearance: none;
+    -moz-appearance: none;
           appearance: none;
   -webkit-print-color-adjust: exact;
           color-adjust: exact;
@@ -11399,9 +11402,9 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: #fffbd5; 
-  background: -webkit-linear-gradient(to bottom, #b20a2c, #fffbd5);  
-  background: linear-gradient(to bottom, #b20a2c, #fffbd5); 
+  background: #fffbd5;
+  background: -webkit-linear-gradient(to bottom, #b20a2c, #fffbd5);
+  background: linear-gradient(to bottom, #b20a2c, #fffbd5);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
