@@ -1,8 +1,14 @@
 <?php
     // Config PHP
     session_start();
-    var_dump($_SESSION);
     require('model/connect-bdd.php');
+    $id = "SELECT `username` FROM `users` WHERE `username`";
+    $firstname = "SELECT `nom` FROM `users` WHERE `nom`";
+    $lastname = "SELECT `prenom` FROM `users` WHERE `prenom`";
+    $email = "SELECT `email` FROM `users` WHERE `email`";
+    
+
+
 
     // Check user IS NOT connected
     // if (!isset($_SESSION['user'])) {
@@ -30,13 +36,13 @@
             <div class="raw">
                 <div class="col-lg-6 mx-auto my-5">
                     <div class="">
-                        <h1>Hello <?= $_SESSION['users']['username'] ?>  </h1>
+                        <h1>Hello <?= $id ?>  </h1>
                     </div>
                     <div class="">
-                        <p>Identifiant : <?= $_SESSION['users']['username'] ?>  </p>
-                        <p>Nom : <?= $_SESSION['users']['nom'] ?></p>
-                        <p>Prenom : <?= $_SESSION['users']['prenom'] ?></p>
-                        <p>Adresse mail : <?= $_SESSION['users']['email'] ?></p>
+                        <p>Identifiant : <?= $id ?>  </p>
+                        <p>Nom : <?= $firstname ?></p>
+                        <p>Prenom : <?= $lastname?></p>
+                        <p>Adresse mail : <?= $email  ?></p>
                     </div>
                     <div>
                         <button type="submit" class="btn btn-success"> 
