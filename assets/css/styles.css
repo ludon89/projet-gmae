@@ -22,13 +22,61 @@
 }
 .bad
 {
-  background: url(../img/background_red_blue.jpg);
+  /* background: url(../img/background_red_blue.jpg);
   background-size: cover;
-  color: white;
+  color: white; */
 }
 .foot{
   background: linear-gradient(180deg, #3F383C 0%, rgba(75, 47, 47, 0.5) 100%);
 }
+
+.img-fluid{
+  width : 75vw;
+  height: 50vh;
+  margin-bottom: 3rem;
+}
+.pdashboard{
+  margin-right: 1rem;
+  font-weight: bolder;
+}
+
+.userh{
+  display: flex;
+  flex-direction: column;
+  margin-left : 40%;
+  margin-right: 33%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.user-btnh{
+  display: flex;
+  margin-left : 40vw;
+  margin-right: 33vw;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.success{
+  background-color: #000;
+  color: #fff;
+  border-radius: 3rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.success:hover{
+  background-color: #C42256;
+  color: #fff;
+}
+
+.p123{
+color : white;
+font-size: 1.2rem;
+margin-top : 2rem;
+}
+
 .popo
   {
     display: flex;
@@ -7501,7 +7549,7 @@ textarea.form-control-lg {
 }
 
 .p-5 {
-  padding: 3rem !important;
+  padding: 0rem !important;
 }
 
 .px-0 {
@@ -8041,6 +8089,41 @@ textarea.form-control-lg {
 
 .invisible {
   visibility: hidden !important;
+}
+
+@media (max-width: 576px){
+
+  .pdashboard{
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .userh{
+    display: flex;
+    flex-direction: column;
+    margin-left : 15px;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+  }
+
+  .user-btnh{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left : auto;
+    margin-right: auto;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .success:hover{
+    background-color: #C42256;
+    color: #fff;
+  }
+
+
 }
 
 @media (min-width: 576px) {
@@ -11368,6 +11451,11 @@ html {
   letter-spacing: 0.1rem;
 }
 
+.backgroundbody{
+background: #fffbd5;
+background: -webkit-linear-gradient(to bottom, #b20a2c, #fffbd5);
+background: linear-gradient(to bottom, #b20a2c, #fffbd5);
+}
 .navbar-custom {
   padding-top: 1rem;
   padding-bottom: 1rem;

@@ -1,9 +1,3 @@
-<?php
-
-// var_dump($_SESSION['user']);
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,7 +26,7 @@
                         <label for="password" class="form-label">Mot de passe</label>
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                    <button type="submit" class="btn btn-primary" style=" border-radius : 2rem;">Se connecter</button>
                     <a href="#!">Mot de passe oublié ?</a>
                 </form>
             </div>

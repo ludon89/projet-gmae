@@ -41,7 +41,7 @@ session_start();
                         <label for="password" class="form-label">Mot de passe</label>
                         <input type="password" name="password" class="form-control" id="password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <button type="submit" class="btn btn-primary" style="border-radius : 2rem">Ajouter</button>
                 </form>
             </div>
         </div>

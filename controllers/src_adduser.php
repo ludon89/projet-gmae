@@ -19,6 +19,7 @@ try {
     $req = $bdd->query($sql); // Execution de la requête
     $res = $req->rowCount(); // Comptage des lignes insérées
     $err = "L'utilisateur a bien été ajouté !";
+    header('Location: ../views/connexion.php');
 } catch(PDOException $error) {
     // Lorsqu'un email existe déja (DUPLICATE ENTRY)
     if ($error->errorInfo[1] === 1062) {

@@ -72,10 +72,10 @@ $dislikes = $req->rowCount();
     <!-- header-->
     <?php require('../template/header.php'); ?>
     <section>
-        <div class="container px-5">
+        <div class="container px-5 mt-5 mb-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    <div class="p-5"><img class="img-fluid rounded-circle" src="assets/img/02.jpg" alt="..." /></div>
+                    <div class="p-5"><img class="img-fluid rounded-start" style="object-fit : contain; height: 45vh; width : 45vw;" src="<?= $acteur['logo'] ?>" alt="logo entreprise"/></div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
@@ -90,17 +90,10 @@ $dislikes = $req->rowCount();
     <section class="mb-5">
         <div class="card bg-light">
             <div class="card-body">
-                <form class="mb-4" method="post" action="#">
-                    <!-- Ajout like & dislike -->
-                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" name="vote" id="like" value="1" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="like">Like</label>
-                        <input type="radio" class="btn-check" name="vote" id="dislike" value="0" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="dislike">Dislike</label>
-                    </div>
-                    <!-- Ajout commentaire-->
-                    <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
-                    <button type="submit" class="btn btn-success">Publier</button>
+                <!-- Comment form-->
+                <form class="mb-4">
+                    <textarea class="form-control" rows="5" placeholder="Écrire un commentaire..."></textarea>
+                    <button type="submit" class="btn btn-primary mt-3" style="border-radius : 2rem; font-size : 1.2rem;">Publier</button>
                 </form>
                 <hr>
                 <!-- Affichage likes et commentaires-->
@@ -118,8 +111,8 @@ $dislikes = $req->rowCount();
             </div>
         </div>
     </section>
-    <!-- Footer-->
-    <?php require('../template/footer.php'); ?>
+<!-- Footer-->
+<?php require('../template/footer.php'); ?>
     <!-- script -->
     <?php require('../template/script.php'); ?>
 </body>
