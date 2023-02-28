@@ -3,6 +3,8 @@ session_start();
 
 // Data
 $idActeur = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+$idUser = $_SESSION["user"];
+var_dump($idUser);
 
 // Connexion à la BDD
 require('../models/connect-bdd.php');
@@ -51,6 +53,9 @@ FROM
 $req = $bdd->query($sql);
 $dislikes = $req->rowCount();
 
+// Requête et exécution ajout vote (like ou dislike)
+
+
 ?>
 
 <!DOCTYPE html>
@@ -88,11 +93,19 @@ $dislikes = $req->rowCount();
     <section class="mb-5">
         <div class="card bg-light">
             <div class="card-body">
-                <!-- Comment form-->
+                <!-- Ajout like & dislike -->
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="1" id="1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="1">Like</label>
+                    <input type="radio" class="btn-check" name="0" id="0" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="0">Dislike</label>
+                </div>
+                <!-- Ajout commentaire-->
                 <form class="mb-4">
                     <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
                     <button type="submit" class="btn btn-success">Publier</button>
                 </form>
+                <hr>
                 <!-- Single comment-->
                 <div class="d-flex">
                     <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
