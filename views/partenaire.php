@@ -3,6 +3,8 @@ session_start();
 
 // Data
 $idActeur = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+$_SESSION["acteurs"]["id_acteur"] = $idActeur;
+var_dump($_SESSION["acteurs"]["id_acteur"]);
 
 // Connexion à la BDD
 require('../models/connect-bdd.php');
@@ -93,7 +95,8 @@ $dislikes = $req->rowCount();
                     <textarea class="form-control" rows="5" placeholder="Écrire un commentaire..."></textarea>
                     <button type="submit" class="btn btn-primary mt-3" style="border-radius : 2rem; font-size : 1.2rem;">Publier</button>
                 </form>
-                <!-- Single comment-->
+                <hr>
+                <!-- Affichage likes et commentaires-->
                 <div class="d-flex">
                     <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
                     <div class="ms-3">
