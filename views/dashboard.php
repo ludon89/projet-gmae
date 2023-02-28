@@ -1,7 +1,17 @@
 <?php
 
 session_start();
+ob_start();
 
+require('../models/connect-bdd.php');
+// Préparation de la requête SQL de sélection
+    $sql = "SELECT * FROM users
+        WHERE username = :username";
+    $req = $bdd->prepare($sql);
+ 
+    $req->execute(array(
+        'username' => $_SESSION['username']
+    ));
 ?>
 
 <!DOCTYPE html>
@@ -16,21 +26,26 @@ session_start();
         <?php require('../template/link.php'); ?>
     </head>
     <body id="page-top">
-        <!-- header-->
-        <?php require('../template/header.php'); ?>
-        <div class="">
-            <h1>Hello Id_user</h1>
-        </div>
-        <div class="">
-            <p>Identifiant : </p>
-            <p>Nom : </p>
-            <p>Prenom : </p>
-            <p>Adresse mail : </p>
-        </div>
+       <!-- header-->
+       <?php require('../template/header.php');?>
+       <?php while($res = $req->fetch(PDO::FETCH_ASSOC)) { ?>
         <div>
-        <button type="submit" class="btn btn-success">Modifier</button>
-        <button type="submit" class="btn btn-success">Deconnexion</button>
-        </div>
+            <div class="userh">
+                <h1>Hello <?= $res['username'] ?></h1>
+            </div>
+            <div class="userh">
+                <p><span class="pdashboard">Identifiant :</span><?= $res['username'] ?> </p>
+                <p><span class="pdashboard">Nom :</span><?= $res['nom'] ?> </p>
+                <p><span class="pdashboard">Prenom :</span><?= $res['prenom'] ?> </p>
+                <p><span class="pdashboard">Adresse mail :</span><?= $res['email'] ?> </p>
+            </div>
+            <div class="user-btnh">
+                <button type="submit" class="success" style=" border : none;">Modifier</button>
+                
+            </div>
+        <?php } ?>
+
+            <!-- Footer-->
         <!-- Footer-->
         <?php require('../template/footer.php'); ?>
         <!-- script -->

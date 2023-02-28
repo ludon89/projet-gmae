@@ -33,6 +33,7 @@ $acteurs = $req->fetchAll(PDO::FETCH_ASSOC);
         <section id="scroll">
             <div class="container px-5">
                 <!-- Acteurs/Partenaires -->
+                <h1 style="text-align : center; font-family : catamaran; font-weight: 600; font-size: -webkit-xxx-large;" class="mt-5 mb-3" >Partenaires</h1>
                 <?php
                 foreach ($acteurs as $acteur) {
                     require('../components/accueil_partenaire.php');

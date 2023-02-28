@@ -9,7 +9,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.php">Qui sommes-nous?</a></li>
-                <?php if (isset($_SESSION['user'])) : ?>
+                <?php if (isset($_SESSION['username'])) : ?>
                     <li class="nav-item"><a class="nav-link" href="accueil.php">Partenaires</a></li>
                     <li class="nav-item"><a class="nav-link" href="dashboard.php"><i class="fa-solid fa-user"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="../controllers/logout.php"><i class="fa-solid fa-power-off"></i></a></li>

@@ -1,12 +1,12 @@
 <?php
 // On démarre une session
 session_start();
-
-
+ob_start();
 
 // Data
 $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_ADD_SLASHES);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_ADD_SLASHES);
+$_SESSION['username'] = $_POST['username'];
 
 // Connexion à la BDD
 require('../models/connect-bdd.php');
@@ -14,36 +14,45 @@ require('../models/connect-bdd.php');
 // Requête pour vérifier l'existance de l'user
 
 
-$req = $bdd->query("SELECT * FROM users WHERE username='$username'  "); // Execution de la requête
-// $req->bindParam(':username', $username);
-// $req->bindParam(':password', $password);
-// $req->execute(); // Execution de la requête
-// var_dump($req);
-$res = $req->fetch(PDO::FETCH_ASSOC); // Lecture du résultat de la requête
+$sql = "SELECT * FROM users
+WHERE username = :username";
+$req = $bdd->prepare($sql);
+
+$req->execute(array(
+'username' => $_SESSION['username']
+));
+
+
+
+
 // Si la requête renvoi un résultat
-// if ($res) {
-    // Vérification du password avec le hash stocké en BDD
-    // $passwordCheck = password_verify($password, $res['pass']);
-    // var_dump('ok2');
-    // // Si la reqûete trouve l'email et que le password correspond
-    // if ($passwordCheck) {
-        // Enregistrement des infos du user connect
-        // header('Location: ../views/inscription.php');
-        // Rediriger vers le dashbord du user
-        // header('Location: ../dashboard.php');
-        // exit();
-    // }
-// }else if ($res) {
 
-    $_SESSION['user'] = array(
-        'username' => $res['username'],
-    );
-    header('Location: ../views/dashboard.php');
-    exit();
-// }
+// changement romsma
+while ($res = $req->fetch(PDO::FETCH_ASSOC)) {
 
-// // Redirection par défaut
-// $_SESSION['error'] = "Identifiants invalides !";
+    if ($res['email']) {
+
+        $_SESSION['user'] = array(
+            'username' => $res['username'],
+            "nom" => $res["nom"],
+            'email' => $res['email'],
+            'prenom' => $res['prenom']
+        );
+        header('Location: ../views/accueil.php');
+        exit();
+    } else {
+        $query = "SELECT * FROM users WHERE email = :email";
+        $stmt = $bdd->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        header('Location: ../views/inscription.php');
+    }
+}
+
+
+
+// Redirection par défaut
+$_SESSION['error'] = "Identifiants invalides !";
 // // Sinon : on redirige vers une page d'erreur.
-// header('Location: erreur.php');
-// exit;
+// header('Location: ../views/erreur.php');
+exit;

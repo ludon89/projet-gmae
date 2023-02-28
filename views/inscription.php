@@ -1,7 +1,9 @@
+<!-- changement de romsma -->
 <?php
-
-var_dump($_SESSION['user']);
-
+session_start();
+ob_start();
+$_SESSION['username'];
+var_dump($_SESSION['username']);
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,7 @@ var_dump($_SESSION['user']);
                 <div class="col-lg-6 mx-auto my-5">
                     <h2 class="display-4">Veuillez renseigner ces champs</h2>
                     <!-- Formulaire -->
-                    <form method="post" action="traitement/signup.php">
+                    <form method="post" action="../controllers/signup.php">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nom</label>
                             <input type="text" id="nom" name="nom" class="form-control" required>
@@ -55,7 +57,6 @@ var_dump($_SESSION['user']);
                         </div>
 
                         <button type="submit" class="btn btn-success">Valider</button>
-                        <!-- <a href="connexion.php">ou Se connecter</a> -->
                     </form>
                 </div>
             </div>
